@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-bg text-ink font-body antialiased;
+    line-height: 1.65;
+    overflow-x: hidden;
+  }
+  h1, h2, h3 {
+    @apply font-display;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+  }
+  :focus-visible {
+    outline: 2px solid #9A8DFF;
+    outline-offset: 3px;
+    border-radius: 6px;
+  }
+}
+
+@layer components {
+  .eyebrow {
+    @apply font-mono text-xs uppercase text-accenthi;
+    letter-spacing: 0.18em;
+  }
+  .btn {
+    @apply inline-flex items-center gap-2 font-display font-medium text-[15px] px-[22px] py-[13px] rounded-[10px] cursor-pointer border border-transparent transition-[transform,background,border-color] duration-150 whitespace-nowrap;
+  }
+  .btn:active { transform: translateY(1px); }
+  .btn-primary { @apply bg-accent text-white; }
+  .btn-primary:hover { @apply bg-accenthi; }
+  .btn-ghost { @apply bg-transparent text-ink border-bdstrong; }
+  .btn-ghost:hover { @apply border-accent text-accenthi; }
+  .btn-wa { background: #25D366; color: #04210f; }
+  .btn-wa:hover { filter: brightness(1.08); }
+  .hero-glow::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background:
+      radial-gradient(60% 50% at 18% 0%, rgba(123,108,246,0.16), transparent 70%),
+      radial-gradient(50% 45% at 92% 18%, rgba(52,224,176,0.08), transparent 70%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}
