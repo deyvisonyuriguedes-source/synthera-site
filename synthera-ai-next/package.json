@@ -9,10 +9,12 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@types/three": "^0.185.4",
+    "framer-motion": "11.3.8",
     "next": "14.2.5",
     "react": "18.3.1",
     "react-dom": "18.3.1",
-    "framer-motion": "11.3.8"
+    "three": "^0.185.1"
   },
   "devDependencies": {
     "@types/node": "20.14.10",
